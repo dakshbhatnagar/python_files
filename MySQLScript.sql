@@ -1,6 +1,6 @@
-create database if not exists daksh;
+create database if not exists SalesData;
 
-use daksh;
+use SalesData;
 
 CREATE TABLE IF NOT EXISTS table1 (
     city VARCHAR(255),
@@ -63,4 +63,4 @@ where city = 'Delhi';
 
 drop table table1;
 
-drop database if exists daksh;
+drop database if exists SalesData;
