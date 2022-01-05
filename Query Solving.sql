@@ -1,6 +1,4 @@
-USE db;
-
-# 2nd Highest salary
+# Second Highest salary
 SELECT 
     *
 FROM
@@ -21,8 +19,8 @@ FROM
 where x.j = 'Yes'
 Limit 1,1;
 
-# Highest Salaries from Different Departments
 
+# Highest Salaries from Different Departments
 SELECT 
     x.dept_no, x.emp_no, MAX(salary) AS Salary
 FROM
@@ -33,6 +31,7 @@ FROM
     JOIN salaries s ON de.emp_no = s.emp_no
     ORDER BY s.salary) x
 GROUP BY x.dept_no;
+
 
 #Counting Repeated and New Users
 select 
@@ -49,6 +48,7 @@ from
 	from login_details) x
 group by login_date;
  
+
 # Finding out top 3 salaries from each dept 
 SELECT 
 	* 
@@ -65,8 +65,8 @@ FROM
 WHERE a.ranking < 4
 ORDER BY a.dept_no;
 
-# Finding out odd rows 
 
+# Finding out odd rows 
 select 
 	* 
 from 
@@ -76,6 +76,7 @@ from
 		employees) x 
 	where mod(x.rnk,2) != 0;
 	
+
 # Finding out even rows
 select 
 	* 
@@ -85,3 +86,9 @@ from
 	FROM
 		employees) x 
 	where mod(x.rnk,2) = 0;
+
+
+# Creating a table from another table
+
+CREATE TABLE table1 AS SELECT * FROM
+    employees;
