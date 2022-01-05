@@ -64,3 +64,24 @@ FROM
 	ORDER BY s.salary DESC) a 
 WHERE a.ranking < 4
 ORDER BY a.dept_no;
+
+# Finding out odd rows 
+
+select 
+	* 
+from 
+	(SELECT 
+		*, rank() over (order by emp_no) as rnk
+	FROM
+		employees) x 
+	where mod(x.rnk,2) != 0;
+	
+# Finding out even rows
+select 
+	* 
+from 
+	(SELECT 
+		*, rank() over (order by emp_no) as rnk
+	FROM
+		employees) x 
+	where mod(x.rnk,2) = 0;
