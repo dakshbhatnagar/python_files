@@ -92,3 +92,46 @@ from
 
 CREATE TABLE table1 AS SELECT * FROM
     employees;
+
+
+# Selecting Distinct records without using distinct
+SELECT manager_no
+FROM 
+    emp_manager
+group by manager_no;
+
+# Counting how many managers are managing how many employees
+SELECT 
+    manager_no, COUNT(emp_no) AS DirectReportee
+FROM
+    emp_manager
+GROUP BY manager_no;
+
+
+# Finding Max Salary in an organization
+SELECT 
+    de.emp_no AS EmpID,
+    de.dept_no AS DeptNum,
+    s.salary AS Salary,
+    s.from_date AS HiringDate
+FROM
+    dept_emp de
+        JOIN
+    salaries s ON de.emp_no = s.emp_no
+WHERE
+    salary = (SELECT 
+            MAX(salary)
+        FROM
+            salaries); 
+            
+
+# Deleting records of a table
+DELETE FROM employees 
+WHERE
+    emp_no IN (SELECT 
+        emp_no
+    FROM
+        salaries
+    
+    WHERE
+        emp_no = '10001');
