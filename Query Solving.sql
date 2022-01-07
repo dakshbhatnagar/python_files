@@ -135,3 +135,20 @@ WHERE
     
     WHERE
         emp_no = '10001');
+
+
+# Finding Out which employees are earning more than the avge salary
+
+WITH cte as (SELECT 
+    *
+FROM
+    salaries)
+SELECT 
+    *
+FROM
+    cte
+WHERE
+    salary > (SELECT 
+            TRUNCATE(AVG(salary), 2) AS AvgeSalary
+        FROM
+            salaries);
