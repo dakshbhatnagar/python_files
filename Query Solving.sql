@@ -47,6 +47,39 @@ from
 		end as repeateduser
 	from login_details) x
 group by login_date;
+
+
+
+select login_id, 
+		user_name, 
+		login_date, 
+(Case 
+    when Lag(user_name, 1,'2022-01-02') OVER(ORDER BY user_name ASC) <> user_name and 
+    Lag(user_name, 1,'2022-01-02') OVER(ORDER BY user_name ASC) 
+		Not in 
+(SELECT 
+    login_id
+FROM
+    login_details
+WHERE login_Id IN ('101' , '102', '103')) then login_date
+    else 'Not a New User'
+    end) as FirstLoginDate,
+(Case 
+    when Lag(user_name, 1,'New') OVER(ORDER BY user_name ASC) <> user_name and 
+    Lag(user_name, 1,'New') OVER (ORDER BY user_name ASC) 
+		Not in
+    (SELECT 
+    login_id
+FROM
+    login_details
+WHERE
+    login_Id IN ('101' , '102', '103')) then user_name
+    else 'Old'
+    end) as UserType
+from 
+	login_details
+order by login_id;
+
  
 
 # Finding out top 3 salaries from each dept 
