@@ -185,3 +185,26 @@ WHERE
             TRUNCATE(AVG(salary), 2) AS AvgeSalary
         FROM
             salaries);
+
+# fINDING THE MEDIAN SALARY OF AN ORGANIZATION
+select truncate(avg(salary),2) as Median
+from 
+	(select emp_no,
+	 	salary,
+	 	from_date,
+	 	to_date,
+	 	ROW_NUMBER() OVER(ORDER BY salary asc) RowNumber 
+	 from 
+	 salaries) x 
+where x.RowNumber = '483656' or x.RowNumber = '483657';
+
+Finding names that doesn't start or end with a vowel
+
+SELECT DISTINCT
+    first_name
+FROM
+    employees
+WHERE
+    first_name NOT REGEXP '^[aeiou]'
+        AND first_name NOT REGEXP '[aeiou]$'
+ORDER BY first_name;
