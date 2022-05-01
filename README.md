@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @dakshbhatnagar
 - 👀 I’m interested in all things data
-- 🌱 I’m currently learning Python For Data Analysis
-- 💞️ I’m looking to collaborate on SQL and Python
+- 🌱 I’m currently learning Data Analysis and Machine Learning
+- 💞️ I’m looking to collaborate on everything that's related to data
 - 📫 How to reach me is by mailing me on bhatnagar91@gmail.com
 
 <!---
