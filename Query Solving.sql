@@ -208,3 +208,110 @@ WHERE
     first_name NOT REGEXP '^[aeiou]'
         AND first_name NOT REGEXP '[aeiou]$'
 ORDER BY first_name;
+
+
+# Display manger names and salary grades
+
+SELECT 
+	concat(first_name,' ',last_name) as emp_name, 
+CASE em.manager_no
+    WHEN 110022 THEN (select concat(first_name,' ',last_name) from employees where emp_no in (110022))
+    ELSE (select concat(first_name,' ',last_name) from employees where emp_no in (110039))
+END as manager_name, 
+	s.salary
+FROM
+    employees e
+        JOIN
+    emp_manager em ON e.emp_no = em.emp_no
+        JOIN
+    salaries s ON e.emp_no = s.emp_no
+GROUP BY e.emp_no;
+
+# Display manager names and salary grades where salary>3000
+SELECT 
+	concat(first_name,' ',last_name) as emp_name, 
+CASE em.manager_no
+    WHEN 110022 THEN (select concat(first_name,' ',last_name) from employees where emp_no in (110022))
+    ELSE (select concat(first_name,' ',last_name) from employees where emp_no in (110039))
+END as manager_name, 
+	s.salary
+FROM
+    employees e
+        JOIN
+    emp_manager em ON e.emp_no = em.emp_no
+        JOIN
+    salaries s ON e.emp_no = s.emp_no
+where s.salary > 3000
+GROUP BY e.emp_no;
+
+# Display employee names and department name where salary>2000
+SELECT 
+    CONCAT(first_name, ' ', last_name) AS emp_name, d.dept_name
+FROM
+    employees e
+        JOIN
+    salaries s ON e.emp_no = s.emp_no
+        JOIN
+    dept_emp de ON e.emp_no = de.emp_no
+        JOIN
+    departments d ON de.dept_no = d.dept_no
+WHERE
+    s.salary > 2000
+GROUP BY e.emp_no;
+
+# Display employee names and their salary grades
+SELECT 
+    CONCAT(first_name, ' ', last_name) AS emp_name, s.salary
+FROM
+    employees e
+        JOIN
+    emp_manager em ON e.emp_no = em.emp_no
+        JOIN
+    salaries s ON e.emp_no = s.emp_no
+GROUP BY e.emp_no;
+
+# Display employee names and their manager names
+SELECT 
+    CONCAT(first_name, ' ', last_name) AS emp_name,
+    CASE em.manager_no
+        WHEN
+            110022
+        THEN
+            (SELECT 
+                    CONCAT(first_name, ' ', last_name)
+                FROM
+                    employees
+                WHERE
+                    emp_no IN (110022))
+        ELSE (SELECT 
+                CONCAT(first_name, ' ', last_name)
+            FROM
+                employees
+            WHERE
+                emp_no IN (110039))
+    END AS manager_name
+FROM
+    employees e
+        JOIN
+    emp_manager em ON e.emp_no = em.emp_no
+GROUP BY e.emp_no;
+
+# Display employee names and their manager names & their hire dates where employee joined company before his manager
+
+select * from (SELECT 
+	concat(first_name,' ',last_name) as emp_name, 
+CASE em.manager_no
+    WHEN 110022 THEN (select concat(first_name,' ',last_name) from employees where emp_no in (110022))
+    ELSE (select concat(first_name,' ',last_name) from employees where emp_no in (110039))
+END as manager_name, 
+CASE em.manager_no
+	WHEN '110022' then (select hire_date from employees where emp_no ='110022')
+    WHEN '110039' then (select hire_date from employees where emp_no ='110039')
+END as manager_hire_date,
+	e.hire_date
+FROM
+    employees e
+        JOIN
+    emp_manager em ON e.emp_no = em.emp_no
+GROUP BY e.emp_no) x
+where x.hire_date < x.manager_hire_date;
