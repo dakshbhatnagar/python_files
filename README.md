@@ -1,6 +1,6 @@
-- 👋 Hi, I’m @dakshbhatnagar
+- 👋 Hi, I’m Daksh
 - 👀 I’m interested in all things data
-- 🌱 I’m currently learning Data Analysis and Machine Learning
+- 🌱 I’m currently looking to land my first data role.
 - 💞️ I’m looking to collaborate on everything that's related to data
 - 📫 How to reach me is by mailing me on bhatnagar91@gmail.com
 
