@@ -3,6 +3,6 @@
 - 📫 You can reach me by mailing me on bhatnagar91@gmail.com
 
 PROJECTS
-Gradient Descent From Scratch https://bit.ly/3fwd7JD
-Transfer Learning (VGG16 Model Implementation) https://bit.ly/3RyamVJ
-Tableau https://public.tableau.com/app/profile/daksh.bhatnagar
+- Gradient Descent From Scratch https://bit.ly/3fwd7JD
+- Transfer Learning (VGG16 Model Implementation) https://bit.ly/3RyamVJ
+- Tableau https://public.tableau.com/app/profile/daksh.bhatnagar
