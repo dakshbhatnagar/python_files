@@ -15,8 +15,7 @@ Here's a glimpse of the captivating projects you'll encounter:
 3. **Sentiment Analysis** 📝
    - Delve into the art of sentiment analysis! Unleash the power of Natural Language Processing (NLP) to understand and analyze the sentiments hidden within text.
 
-**And Many More!** 🚀
-   - This is just the beginning! Discover a plethora of notebooks exploring various data science concepts, machine learning models, and fascinating data-driven insights.
+**And Many More!** 🚀 - This is just the beginning! Discover a plethora of notebooks exploring various data science concepts, machine learning models, and fascinating data-driven insights.
 
 ## 🚀 Getting Started
 
@@ -30,7 +29,7 @@ To explore these notebooks and dive into the world of data-driven projects, foll
 
 2. **Choose a project**: Browse through the notebooks and select the one that sparks your curiosity.
 
-3. **Run the notebook**: Each project notebook comes equipped with instructions. Dive into the code and experience the excitement of data science in action!
+3. **Run the notebook**: Each project notebook comes equipped with well written code and comments. Dive into the code and experience the excitement of data science in action!
 
 ## 📞 Contact
 
