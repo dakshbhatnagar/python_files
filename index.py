@@ -1,3 +1,4 @@
+#This app takes data from a google sheet using Google Sheets and Google Drive API and then creates a Streamlit app to show selections and Joinings in a month and quarter
 import pandas as pd
 import gspread
 import numpy as np
