@@ -1,21 +1,21 @@
 # Welcome to the Python Files Repository! 🐍
 
-Hey there! 👋 This is a treasure trove of Python notebooks that will take you on an exciting journey through the realms of data science and machine learning. Within this repository, you'll find a collection of notebooks on various intriguing projects, ranging from **Customer Churn Prediction** to **Stock Price Predictions** and even **Sentiment Analysis**!
+Hey there! 👋 This is a collection of Python notebooks or Files that will take you on an exciting journey through the realms of data science and machine learning. Within this repository, you'll find a collection of notebooks on various intriguing projects, ranging from **Customer Churn Prediction** to **Stock Price Predictions** and even **Sentiment Analysis**!
 
-## 📁 Repository Contents
+## 📁 Python Projects
 
-Here's a glimpse of the captivating projects you'll encounter:
+Here is a glimpse of projects that I've done using Python:
 
 1. **Customer Churn Prediction** 📊
-   - Dive into the world of customer behavior analysis! Unravel the secrets of churn prediction and explore strategies to retain valuable customers.
+   - Dive into the world of customer behavior analysis! Using ANN, we find out if the credit card customer is going to be churned or not. Click [here](https://github.com/dakshbhatnagar/python_files/blob/main/JupyterNotebooks/customer-churn-prediction-anns%20(1).ipynb) 
 
 2. **Stock Price Predictions** 📈
-   - Embark on a financial adventure! Forecast stock prices and witness the magic of predictive analytics in the unpredictable world of finance.
+   - Stock Price predictions are always fun to make. Using Backtesting, a Stastical Model and a Deep Learning Network, we do exactly that. Check out the project [here](https://www.kaggle.com/code/bhatnagardaksh/stock-predictions-with-backtesting-arima-and-gru)
 
 3. **Sentiment Analysis** 📝
-   - Delve into the art of sentiment analysis! Unleash the power of Natural Language Processing (NLP) to understand and analyze the sentiments hidden within text.
+   - Understanding Sentiment of others can be tough. Let's make it a breeze. Click [here](https://www.kaggle.com/code/bhatnagardaksh/youtube-comments-analysis-updated) to find out how
 
-**And Many More!** 🚀 - This is just the beginning! Discover a plethora of notebooks exploring various data science concepts, machine learning models, and fascinating data-driven insights.
+**And Many More!** 🚀 
 
 ## 🚀 Getting Started
 
@@ -31,8 +31,6 @@ To explore these notebooks and dive into the world of data-driven projects, foll
 
 3. **Run the notebook**: Each project notebook comes equipped with well written code and comments. Dive into the code and experience the excitement of data science in action!
 
-## 📞 Contact
+Let's put on our data scientist hat, grab the favorite code editor, and embark on a thrilling journey through the world of Python Files! 
 
-Got questions, suggestions, or just want to share your data science adventures? I'm all ears! Feel free to reach out to me at bhatnagar91@gmail.com, and I promise to respond faster than a Python script executes! 📩💨
-
-So, put on your data scientist hat, grab your favorite code editor, and let's embark on a thrilling journey through the world of Python Files! Happy exploring! 🌟🐍
+Happy exploring! 🌟🐍
