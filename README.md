@@ -23,7 +23,7 @@ To explore these notebooks and dive into the world of data-driven projects, foll
 
 1. **Clone the repository**:
    ```
-   git clone https://github.com/yourusername/python_files.git
+   git clone https://github.com/dakshbhatnagar/python_files.git
    cd python_files
    ```
 
