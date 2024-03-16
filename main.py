@@ -61,3 +61,14 @@ def factorial(num: int):
 
 # print(factorial(-5))
 # print(factorial(5))
+
+
+## HOW TO REVERSE A LIST
+nums = [1,2,3,4,5,6,7]
+# Initialize a new list
+new_nums= []
+#Run the loop backwards, range function syntax is start, stop and step, stop is -1 
+# to include the first index, and step is -1 to tell python the loop should run decrementally
+for i in range(len(nums)-1,-1,-1):
+    new_nums.append(nums[i])
+print(new_nums)
