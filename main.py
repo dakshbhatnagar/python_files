@@ -72,3 +72,18 @@ new_nums= []
 for i in range(len(nums)-1,-1,-1):
     new_nums.append(nums[i])
 print(new_nums)
+
+## HOW TO GET UNIQUE VALUES AND SORT THE UNIQUE VALUES LIST
+nums = [10,11,8,7,3,4,5,8,3,2,0,0]
+new_nums = []
+
+for i in range(len(nums)):
+    if nums[i] not in new_nums:
+        new_nums.append(nums[i])
+
+for num in range(len(new_nums)):
+    for j in range(num + 1, len(new_nums)):
+        if new_nums[num] > new_nums[j]:
+            new_nums[num], new_nums[j] = new_nums[j], new_nums[num]
+
+print(new_nums)
